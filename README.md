@@ -1,0 +1,2 @@
+# typescript_training
+typescriptの基礎を学ぶため，実際に手を動かした学習ノート
