@@ -1,0 +1,31 @@
+{
+  "name": "typescript_training",
+  "version": "1.0.0",
+  "description": "- typescriptの基礎を学ぶため，実際に手を動かした学習ノート\r - Qiita の記事を参考にしながら、手を動かして理解を深めるためのリポジトリ",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-Mzk/typescript_training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M-Mzk/typescript_training/issues"
+  },
+  "homepage": "https://github.com/M-Mzk/typescript_training#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "typescript": "^5.9.3"
+  }
+}
