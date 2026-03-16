@@ -3,15 +3,14 @@
 
 ---
 
-## 📅 2026-03-10
-### 📝 今日の目的
+## 📝 目的
 - TypeScript を用いたバックエンド開発を学ぶ
 - TypeScript の環境構築
 - Expressでバックエンドに入門
 
 ---
 
-### 💻 実行したコマンド
+## 💻 実行したコマンド
 ```bash
 $ node index.ts # Node.jsはTypescriptを実行できない
 
@@ -40,6 +39,9 @@ $ node server.js
 
 # 新しいターミナルで文字列を取得
 $ curl -X GET http://localhost:3000
+
+# その後GET，POST, PUT，DELETEリクエストを送信し，挙動を確認した．
+
 
 ```
 
