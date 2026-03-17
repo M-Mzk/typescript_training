@@ -1,6 +1,12 @@
 import express from "express";
 import sqlite3 from "sqlite3";
 
+interface Cat {
+  id?: number
+  name: string
+  feature: string
+}
+
 const app = express();
 app.use(express.json());
 
@@ -13,6 +19,10 @@ app.get("/", (req, res) => { // req はクライアントからのリクエス�
 
 app.get("/cats", (req, res) => {
   db.all("SELECT * FROM cats", (err, rows) => {
+    if (err) {
+      res.status(500).send({ error: err.message });
+      return;
+    }
     res.send(rows);
   });
 });
@@ -29,7 +39,7 @@ app.get("/cats/:id", (req, res) => {
 });
 
 app.post("/cats", (req, res) => {
-  const { name, feature } = req.body;
+  const { name, feature } = req.body as Cat;
   db.run(
     "INSERT INTO cats (name, feature) VALUES (?, ?)",
     [name, feature],
@@ -43,7 +53,7 @@ app.post("/cats", (req, res) => {
 
 app.put("/cats/:id", (req, res) => {
   const { id } = req.params;
-  const { name, feature } = req.body;
+  const { name, feature } = req.body as Cat;
   db.run(
     "UPDATE cats SET name = ?, feature = ? WHERE id = ?",
     [name, feature, id],
